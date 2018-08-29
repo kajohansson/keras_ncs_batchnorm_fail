@@ -2,6 +2,8 @@
 
 Simple dummy network to showcase building a keras network that I can't get to run with NCS.
 
+![example network graph](https://raw.githubusercontent.com/kajohansson/keras_ncs_batchnorm_fail/master/plotmodel_example.png "example network graph")
+
 To create, train and export model using keras, run:
 
 ```./run.sh```
