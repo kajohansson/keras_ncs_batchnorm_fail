@@ -1,0 +1,12 @@
+out
+out/checkpoint
+out/example.chkp.data-00000-of-00001
+out/example.chkp.index
+out/example.chkp.meta
+out/example_graph.pbtxt
+out/frozen_example.pb
+out/opt_example.pb
+
+model_example.json
+plotmodel_example.png
+weights_example.h5
