@@ -13,7 +13,8 @@ mvNCCompile v02.00, Copyright @ Intel Corporation 2017
 
 /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_inspect.py:45: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead
 shape: [1, 160, 160, 3]
-[Error 5] Toolkit Error: Stage Details Not Supported: IsVariableInitialized```
+[Error 5] Toolkit Error: Stage Details Not Supported: IsVariableInitialized
+```
 
 If I run it on the frozen and optimized for inference protobuf, it produces this:
 
@@ -22,7 +23,8 @@ mvNCCompile v02.00, Copyright @ Intel Corporation 2017
 
 /usr/local/lib/python3.5/dist-packages/tensorflow/python/util/tf_inspect.py:45: DeprecationWarning: inspect.getargspec() is deprecated, use inspect.signature() instead
 shape: [1, 160, 160, 3]
-[Error 5] Toolkit Error: Stage Details Not Supported: Top Not Supported - Constants conv1_bn/moving_variance```
+[Error 5] Toolkit Error: Stage Details Not Supported: Top Not Supported - Constants conv1_bn/moving_variance
+```
 
 Also worth noting, if I run the network with another input size if produces this for the protobuf:
 
@@ -88,7 +90,8 @@ Caused by op 'conv1_bn/batchnorm_1/mul_1', defined at:
     self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
 
 InvalidArgumentError (see above for traceback): Incompatible shapes: [1,120,120,64] vs. [1,80,1,1]
-	 [[Node: conv1_bn/batchnorm_1/mul_1 = Mul[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"](conv1/Relu, conv1_bn/batchnorm_1/mul)]]```
+	 [[Node: conv1_bn/batchnorm_1/mul_1 = Mul[T=DT_FLOAT, _device="/job:localhost/replica:0/task:0/device:CPU:0"](conv1/Relu, conv1_bn/batchnorm_1/mul)]]
+```
 
 Any help with how to get BatchNormalization to work with Keras and Movidius NCS is highly appreciated!
 
